@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+body {
+    background-color: pink;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card-container {
+    width: 27vw;
+    height: 40vw;
+    border-radius: 1vw;
+    perspective: 1000px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+
+.froggie {
+    width: 15vw;
+}
+
