@@ -3,6 +3,8 @@
 :root {
     --background-color: rgb(255, 223, 243);
     --card-color: aliceblue; 
+    --card2-color: rgb(233, 242, 249);
+    --text-color: rgb(255, 2, 149);
 }
 
 body {
@@ -13,10 +15,19 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: var(--text-color);
+    padding: 3vw;
+    margin: 3vw;
+}
 
 .card-container {
 
-    .card-inner {
+    .card {
         position: relative;
         width: 27vw;
         height: 40vw;
@@ -30,6 +41,8 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: var(--card-color);
+
           }
 
           .card-front {
@@ -38,31 +51,23 @@ body {
             transform-origin:left;
 	        transform:perspective(50em) rotateY(0turn);
             transform-style:preserve-3d;
-            background-color: var(--card-color);
 
             .froggie-img {
                 width: 15vw;
             }
           }
 
-          .card-front:hover {
-            transform:perspective(50em) rotateY(-.5turn);
-          }
-
           .card-inside {
-            background-color: var(--card-color);
-
-            h1 {
-                font-family: "Hachi Maru Pop", cursive;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 4vw;
-            }
+            background-color: var(--card2-color);
           }
     }
 
-    .card-inner:hover {
+    .card:hover {
         transform: rotate(5deg);
+
+        .card-front {
+            transform:perspective(50em) rotateY(-.5turn);
+        }
     }
 }
 
